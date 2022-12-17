@@ -6,7 +6,6 @@
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/event_groups.h"
-#include "esp_event.h"
 #include "esp_wifi.h"
 #include "esp_system.h"
 
@@ -15,7 +14,7 @@
 
 #include "esp_log.h"
 
-#define TAG "ESP_CAM_TG"
+#define TAG "ESP_CAM_TG" // todo: extract to common place
 
 #define EXAMPLE_ESP_WIFI_SSID CONFIG_ESP_WIFI_SSID
 #define EXAMPLE_ESP_WIFI_PASS CONFIG_ESP_WIFI_PASSWORD
