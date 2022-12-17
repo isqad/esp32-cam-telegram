@@ -1,4 +1,9 @@
 menu "ESP32-CAM Telegram Bot Configuration"
+    config ESP_TG_BOT_TOKEN
+        string "Telegram bot token"
+        default "689500456:AAGl4r4t2j-LwcsVIYduzJJCR1MTZBCgYUY"
+        help
+            Telegram bot token to interact it.
 
     config ESP_WIFI_SSID
         string "WiFi SSID"
