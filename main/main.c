@@ -337,13 +337,7 @@ void app_main(void)
   };
 
   ESP_ERROR_CHECK(esp_event_loop_create(&tg_bog_event_loop_args, &tg_bog_event_loop));
-
   ESP_ERROR_CHECK(esp_event_handler_register_with(tg_bog_event_loop, TASK_EVENTS, EVENT_TG_BOT_GET_UPDATES, tg_get_updates, NULL));
 
   ESP_ERROR_CHECK(esp_event_post_to(tg_bog_event_loop, TASK_EVENTS, EVENT_TG_BOT_GET_UPDATES, NULL, 0, portMAX_DELAY));
-
-  for( ;; )
-  {
-      vTaskDelay(pdMS_TO_TICKS(IDLE_PERIOD_MS));
-  }
 }
